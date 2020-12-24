@@ -12,18 +12,7 @@ npm install --save http-client
 
 ## Usage
 
-```tsx
-import React, { Component } from 'react'
-
-import MyComponent from 'http-client'
-import 'http-client/dist/index.css'
-
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
-}
-```
+WIP
 
 ## License
 

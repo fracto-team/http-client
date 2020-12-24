@@ -1,10 +1,13 @@
 {
-  "name": "http-client",
+  "name": "@fracto/http-client",
   "version": "1.0.0",
   "description": "Customizable React http client library",
   "author": "https://github.com/fracto-team",
   "license": "MIT",
-  "repository": "https://github.com/fracto-team/http-client",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fracto-team/http-client.git"
+  },
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
   "source": "src/index.ts",
@@ -29,5 +32,20 @@
   },
   "files": [
     "dist"
+  ],
+  "bugs": {
+    "url": "https://github.com/fracto-team/http-client/issues"
+  },
+  "homepage": "https://github.com/fracto-team/http-client#readme",
+  "keywords": [
+    "Http",
+    "Client",
+    "Customizable",
+    "Adaptor",
+    "React",
+    "ReactNative",
+    "React",
+    "Native",
+    "React-Native"
   ]
 }

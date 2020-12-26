@@ -37,7 +37,7 @@ export default function App() {
 			{
 				!todosAPI.loading && todosAPI.networkState === "success" && (
 					<div>
-						{todos.map((item) => (<div key={item.id}>{item.title}</div>)}
+						{todos.map((item) => (<div key={item.id}>{item.title}</div>))}
 					</div>
 				)
 			}

@@ -11,8 +11,43 @@ npm install --save http-client
 ```
 
 ## Usage
+```jsx
+export default function App() {
+	const [todos, setTodos] = useState([]);
+	
+	const todosAPI = useAPI("GET", "/todos");
+	
+	const fetchTodos = useCallback(() => {
+		todosAPI.call();
+	},  [todosAPI, params]);
+	
+	useEffect(() => {
+		fetchTodos();
+	}, []);
+	
+	useEffect(() => {
+		if(todosAPI.networkState === 'success' && todosAPI.body) {
+			setTodos(todosAPI.body);
+		}
+	}, [todosAPI.body, todosAPI.networkState]);
+	
+	return (
+		<div>
+			{todosAPI.loading && <div>Loading...</div>}
+			{
+				!todosAPI.loading && todosAPI.networkState === "success" && (
+					<div>
+						{todos.map((item) => (<div key={item.id}>{item.title}</div>)}
+					</div>
+				)
+			}
+			{!todosAPI.loading && todosAPI.networkState === "error" && (<div>Error fetching todos</div>)}
+		</div>
+	);
+}
+```
 
-WIP
+See more advanced demo on [codesandbox](https://codesandbox.io/s/fracto-http-client-sample-kr95m)
 
 ## License
 

@@ -24,13 +24,14 @@ export type HttpMethod = typeof GET | typeof POST | typeof PUT | typeof DELETE |
 export type NetworkStatus = typeof INITIALIZED | typeof PENDING | typeof ERROR | typeof SUCCESS;
 export type ApiErrorType = string | object | undefined | null;
 export type QueryParams = { [key: string]: any };
-export type CallOptions = { params?: QueryParams, requestBody?: string | Blob | FormData; requestHeaders?: Headers };
+export type RequestBody = string | Blob | FormData | object | any;
+export type CallOptions = { params?: QueryParams, requestBody?: RequestBody; requestHeaders?: Headers };
 export type HttpRequest = {
   method: HttpMethod,
   url: string,
   provider: ApiContextInterface,
   params?: QueryParams,
-  requestBody?: string | Blob | FormData | object | any,
+  requestBody?: RequestBody,
   headers?: Headers
 };
 export type ResponseHandler<B, E> = {

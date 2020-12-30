@@ -30,7 +30,7 @@ export type HttpRequest = {
   url: string,
   provider: ApiContextInterface,
   params?: QueryParams,
-  requestBody?: string | Blob | FormData,
+  requestBody?: string | Blob | FormData | object | any,
   headers?: Headers
 };
 export type ResponseHandler<B, E> = {

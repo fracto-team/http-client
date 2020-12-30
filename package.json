@@ -1,6 +1,6 @@
 {
   "name": "@fracto/http-client",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Customizable React http client library",
   "author": "https://github.com/fracto-team",
   "license": "MIT",
